@@ -33,16 +33,6 @@ ASSISTANT_API_ENDPOINT = 'embeddedassistant.googleapis.com'
 DEFAULT_GRPC_DEADLINE = 60 * 3 + 5
 PLAYING = embedded_assistant_pb2.ScreenOutConfig.PLAYING
 
-class BroadcastMessage(Resource):
-    def get(self):
-        message = request.args.get('message', default = 'This is a test!')
-        text_query = 'broadcast '+message
-        response_text, response_html = assistant.assist(text_query=text_query)
-        logging.debug(response_text)
-        return {'status': 'OK'}
-
-api.add_resource(BroadcastMessage, '/broadcast_message')
-
 class Command(Resource):
     def get(self):
         message = request.args.get('message', default = 'This is a test!')
