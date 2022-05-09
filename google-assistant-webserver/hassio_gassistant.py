@@ -64,7 +64,7 @@ class GoogleTextAssistant(object):
         self.conversation_state = None
         # Force reset of first conversation.
         self.is_new_conversation = True
-        self.display = display
+        self.display = False
         self.assistant = embedded_assistant_pb2_grpc.EmbeddedAssistantStub(
             channel
         )
