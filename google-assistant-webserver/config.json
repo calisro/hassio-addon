@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "slug": "google_assistant_webserver",
   "description": "A virtual personal assistant developed by Google (text input via webserver). "
-  "url": "https://github.com/calisro/hassio-addons/",
+  "url": "https://github.com/calisro/hassio-addon/",
   "startup": "application",
   "boot": "auto",
   "arch": ["armhf", "amd64"],
